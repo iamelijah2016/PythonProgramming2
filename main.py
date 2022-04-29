@@ -1,5 +1,5 @@
-groceries = {"chicken": 8, "apple": 6, "cucumbers": 3, "milk": 2, "oranges": 4}
+speakers = {"Sir Rafael": 54, "Ms. Joan": 33, "Ms. Dana": 67}
 
-groceries.pop("oranges")
+speaker_names = speakers.keys()
 
-print(groceries)
+print(speaker_names)
