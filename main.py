@@ -1,26 +1,44 @@
-# super() method
-
-class User:
-    def __init__(self, username, password):
-        self.username = username
-        self.password = password
+class ClubMembers:
+    def __init__(self, name, birthday, age, favorite_food, goal):
+        self.name = name
+        self.birthday = birthday
+        self.age = age
+        self.favorite_food = favorite_food
+        self.goal = goal
 
     def display1(self):
-        print("Username:", self.username)
-        print("Password", self.password)
+        print("Name:", self.name)
+        print("Birthday:", self.birthday)
+        print("Age:", self.age)
+        print("Favorite food:", self.favorite_food)
+        print("Goal:", self.goal)
 
 
-class Admin(User):
-    # overriding the init of class User
-    def __init__(self, username, password, code):
-        self.code = code
-        # super() returns an object of the class User
-        super().__init__(username, password)
+class ClubOfficers(ClubMembers):
+    def __init__(self, name, birthday, age, favorite_food, goal, position):
+        self.position = position
+        # # my solution using super() method
+        # super().__init__(name, birthday, age, favorite_food, goal)
 
-    def display3(self):
-        super().display1()
-        print("Code:", self.code)
+        # the solution
+        ClubMembers.__init__(self, name, birthday, age, favorite_food, goal)
+
+    def display2(self):
+        # # my solution using super() method
+        # super().display1()
+        # print("Position:", self.position)
+
+        # the solution
+        print("Name:", self.name)
+        print("Birthday:", self.birthday)
+        print("Age:", self.age)
+        print("Favorite food:", self.favorite_food)
+        print("Goal:", self.goal)
+        print("Position:", self.position)
 
 
-a_1 = Admin("leslie2001", "password 1234", "2468")
-a_1.display3()
+m_1 = ClubMembers("Tom", "January 16", "14", "Ice cream", "To be happy")
+o_4 = ClubOfficers("Vera", "June 22", "16", "Beef stroganoff", "To be the world's greatest chef", "Treasurer")
+
+m_1.display1()
+o_4.display2()
