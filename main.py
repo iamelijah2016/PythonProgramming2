@@ -1,19 +1,11 @@
-swimming_team_tryout = {
-    "Carl": "passed",
-    "Quentin": "failed",
-    "John Y.": "passed",
-    "Peter": "failed",
-    "Max. T": "passed",
-    "Joseph": "passed",
-    "Jone": "failed",
-    "Jorge": "failed",
-    "George": "passed",
-    "Ben": "passed",
-    "Jerome": "passed",
-    "Rick": "failed",
-    "Max G.": "failed",
-    "John P.": "failed",
-    "Vince": "passed"
-}
+# f = open("file.txt", "x")
 
-print(swimming_team_tryout.get("Jorge"))
+# f = open("file.txt", "w")
+# f.write("This is a sample text file")
+
+f = open("file.txt", "a")
+f.write("\nThis is a another line")
+
+f = open("file.txt", "r")
+print(f.read())
+f.close()
