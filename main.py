@@ -1,9 +1,21 @@
-f = open("new.txt", "w")
-f.write("It is a much easier programming language to learn")
-f = open("new.txt", "a")
-f.write("\nI will explore the fields of Data Science and Machine Learning")
-f.write("\nI will use my learnings in my classes")
-f.write("\nI want to become an expert in Data Science and/or Machine Learning")
-f = open("new.txt", "r")
+import os
+
+# Step 1
+f = open("file.txt", "r")
+
+# Step 2
 print(f.read())
+
+# Step 3
+print(f.readline())
+
+# Step 4
+for x in f:
+    print(x)
 f.close()
+
+# Step 5
+if os.path.exists("file.txt"):
+    os.remove("file.txt")
+else:
+    print("File does not exist.")
