@@ -1,7 +1,5 @@
-best_burger = "Burger King"
-number_2_burger = "McDonald's"
+from functionmodule import say_hi
+from functionmodule import say_goodbye
 
-
-assert best_burger == "McDonald's"
-# assert number_2_burger == "McDonald's"
-
+print(say_hi("Jun"))
+print(say_goodbye("Rey"))
