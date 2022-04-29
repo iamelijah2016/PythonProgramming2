@@ -1,11 +1,9 @@
-# f = open("file.txt", "x")
-
-# f = open("file.txt", "w")
-# f.write("This is a sample text file")
-
-f = open("file.txt", "a")
-f.write("\nThis is a another line")
-
-f = open("file.txt", "r")
+f = open("new.txt", "w")
+f.write("It is a much easier programming language to learn")
+f = open("new.txt", "a")
+f.write("\nI will explore the fields of Data Science and Machine Learning")
+f.write("\nI will use my learnings in my classes")
+f.write("\nI want to become an expert in Data Science and/or Machine Learning")
+f = open("new.txt", "r")
 print(f.read())
 f.close()
